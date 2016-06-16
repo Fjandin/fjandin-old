@@ -1,0 +1,32 @@
+{
+  "name": "fjandin",
+  "version": "0.0.1",
+  "description": "Fjandin monorepo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "eslint --quiet . --ext=jsx --ext=js",
+    "build": "sh bin/build.sh",
+    "2npm": "sh bin/2npm.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fjandin/fjandin.git"
+  },
+  "author": "René Bischoff <rene.bischoff@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Fjandin/fjandin/issues"
+  },
+  "homepage": "https://github.com/Fjandin/fjandin#readme",
+  "devDependencies": {
+    "babel-cli": "6.10.1",
+    "babel-core": "6.9.1",
+    "babel-plugin-transform-runtime": "6.9.0",
+    "babel-preset-es2015": "6.9.0",
+    "babel-preset-react": "6.5.0",
+    "babel-preset-stage-1": "6.5.0",
+    "eslint": "2.12.0",
+    "publish": "0.6.0"
+  }
+}

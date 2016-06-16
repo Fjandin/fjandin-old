@@ -1,0 +1,27 @@
+{
+  "name": "fjandin-transition",
+  "version": "0.0.1",
+  "description": "Transition util",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf dist/; ./../../node_modules/babel-cli/bin/babel.js -D -d dist index.js;",
+    "2npm": "./../../node_modules/publish/bin/publish.js"
+  },
+  "author": "René Bischoff <rene.bischoff@gmail.com>",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fjandin/fjandin.git"
+  },
+  "author": "René Bischoff <rene.bischoff@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Fjandin/fjandin/issues"
+  },
+  "homepage": "https://github.com/Fjandin/fjandin/src/transition#readme"
+}
