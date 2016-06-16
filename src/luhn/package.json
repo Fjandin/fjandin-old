@@ -1,6 +1,6 @@
 {
   "name": "fjandin-luhn",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Luhn checksum generator and validator",
   "main": "dist/index.js",
   "scripts": {
