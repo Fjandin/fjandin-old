@@ -1,6 +1,6 @@
 {
   "name": "fjandin-secure-math-random",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Secure math random method",
   "main": "dist/index.js",
   "scripts": {

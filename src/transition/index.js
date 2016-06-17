@@ -24,12 +24,13 @@ const EASING = {
 
 // Polyfill to request animation frame from browser
 const requestAnimFrame = (function requestAnimFrame() {
-    const alternative = (callback) => window.setTimeout(callback, 1000 / 60);
-    return typeof window !== undefined ? window.requestAnimationFrame ||
+    const alternative = (callback) => setTimeout(callback, 1000 / 60);
+    return typeof window !== 'undefined' ? window.requestAnimationFrame ||
         window.webkitRequestAnimationFrame ||
         window.mozRequestAnimationFrame ||
         alternative : alternative;
 })();
+
 
 // transition a number
 function transition({start, end, duration, easing, callback}) {
@@ -47,7 +48,7 @@ function transition({start, end, duration, easing, callback}) {
                 return;
             }
             currentTime += (Date.now() - lastFrameTime);
-            let val = EASING[easing || 'easeInOutQuad'](currentTime, start, diff, duration);
+            let val = (easing || EASING.easeInOutQuad)(currentTime, start, diff, duration);
             if ((currentTime >= duration) || (diff > 0 && val >= end) || (diff < 0 && val <= end)) {
                 val = end;
                 callback(null, val);
@@ -63,5 +64,7 @@ function transition({start, end, duration, easing, callback}) {
     promise.cancel = () => {canceled = true;};
     return promise;
 }
+
+transition.EASING = EASING;
 
 module.exports = transition;

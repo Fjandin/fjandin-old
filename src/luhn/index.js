@@ -18,7 +18,7 @@ function luhnSum(num) {
     return sum;
 }
 
-function isValid(num) {
+function validate(num) {
     if (!isNumbers(num)) {return false;}
     const sum = luhnSum(num);
     return sum && sum % 10 === 0;
@@ -36,7 +36,7 @@ function generate(num) {
 }
 
 module.exports = {
-    isValid,
+    validate,
     checksum,
     generate
 };
